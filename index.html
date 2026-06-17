@@ -1,0 +1,893 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0A6EBD" />
+    <title>د. محمد حسني | أخصائي الأطفال وحديثي الولادة</title>
+    <meta
+      name="description"
+      content="عيادة د. محمد حسني للأطفال وحديثي الولادة - متابعة صحة الطفل وعلاج أمراض الأطفال. شركاء في صحة طفلك."
+    />
+    <meta name="keywords" content="طبيب أطفال, حديثي الولادة, عيادة أطفال, الفيوم, تطعيمات, متابعة نمو الطفل, د. محمد حسني" />
+    <meta name="author" content="د. محمد حسني" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="د. محمد حسني | أخصائي الأطفال وحديثي الولادة" />
+    <meta property="og:description" content="عيادة د. محمد حسني للأطفال وحديثي الولادة - متابعة صحة الطفل وعلاج أمراض الأطفال." />
+    <meta property="og:locale" content="ar_AR" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Lalezar&family=Tajawal:wght@300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"Physician","name":"د. محمد حسني","medicalSpecialty":"Pediatric","description":"أخصائي الأطفال وحديثي الولادة","telephone":"+201002706919","address":{"@type":"PostalAddress","streetAddress":"بجوار مستشفى الندى - أعلى مركز النجح للعلاج الطبيعي","addressLocality":"الفيوم","addressCountry":"EG"},"openingHours":"Sa-Th 15:30-19:30","slogan":"شركاء في صحة طفلك"}
+    </script>
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"MedicalClinic","name":"عيادة د. محمد حسني للأطفال","description":"عيادة د. محمد حسني للأطفال وحديثي الولادة - متابعة صحة الطفل وعلاج أمراض الأطفال.","telephone":"+201002706919","address":{"@type":"PostalAddress","streetAddress":"بجوار مستشفى الندى - أعلى مركز النجح للعلاج الطبيعي","addressLocality":"الفيوم","addressCountry":"EG"}}
+    </script>
+
+    <!-- ================================ CSS ================================ -->
+    <style>
+      :root {
+        --primary: #0a6ebd;
+        --primary-d: #075a9c;
+        --secondary: #38bdf8;
+        --bg: #f5fafe;
+        --dark: #0f172a;
+        --accent: #7dd3fc;
+        --mint: #5eead4;
+        --coral: #fb7185;
+        --amber: #fbbf24;
+        --wa: #25d366;
+        --ink: #1e293b;
+        --grad: linear-gradient(270deg, var(--primary), var(--secondary));
+        --grad-soft: linear-gradient(135deg, #e0f2fe, #f0f9ff);
+        --shadow: 0 20px 50px rgba(10, 110, 189, 0.12);
+        --shadow-lg: 0 30px 70px rgba(10, 110, 189, 0.22);
+        --glass: rgba(255, 255, 255, 0.65);
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        font-family: "Cairo", "Tajawal", sans-serif;
+        background: var(--bg); color: var(--ink);
+        overflow-x: hidden; line-height: 1.7;
+      }
+      a { text-decoration: none; color: inherit; }
+      ul { list-style: none; }
+      img { display: block; max-width: 100%; }
+      ::selection { background: var(--secondary); color: #fff; }
+      ::-webkit-scrollbar { width: 11px; }
+      ::-webkit-scrollbar-track { background: #e0f2fe; }
+      ::-webkit-scrollbar-thumb { background: var(--grad); border-radius: 999px; }
+
+      .container { width: 100%; max-width: 1200px; margin-inline: auto; padding-inline: 22px; }
+      .display { font-family: "Lalezar", "Cairo", sans-serif; font-weight: 400; letter-spacing: .5px; }
+      .glass {
+        background: var(--glass);
+        backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+      }
+      .glass-dark {
+        background: rgba(15, 23, 42, 0.5);
+        backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+      }
+      .grad-text {
+        background: var(--grad); -webkit-background-clip: text;
+        background-clip: text; color: transparent;
+      }
+
+      /* ---------- Scroll progress + cursor glow ---------- */
+      .progress {
+        position: fixed; top: 0; inset-inline: 0; height: 4px; z-index: 100;
+        background: var(--grad); width: 0%;
+        box-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
+      }
+      .cursor-glow {
+        position: fixed; width: 420px; height: 420px; border-radius: 50%;
+        background: radial-gradient(circle, rgba(56,189,248,.18), transparent 65%);
+        pointer-events: none; z-index: 0; transform: translate(-50%, -50%);
+        transition: opacity .4s; mix-blend-mode: multiply;
+      }
+
+      /* ---------- Aurora background ---------- */
+      .aurora { position: fixed; inset: 0; z-index: -2; overflow: hidden; }
+      .aurora span {
+        position: absolute; border-radius: 50%; filter: blur(90px); opacity: .5;
+        animation: drift 22s ease-in-out infinite;
+      }
+      .aurora .a1 { width: 50vw; height: 50vw; background: #bae6fd; top: -10%; inset-inline-end: -10%; }
+      .aurora .a2 { width: 40vw; height: 40vw; background: #99f6e4; bottom: -15%; inset-inline-start: -8%; animation-delay: -7s; }
+      .aurora .a3 { width: 35vw; height: 35vw; background: #e0f2fe; top: 40%; inset-inline-start: 35%; animation-delay: -14s; }
+
+      /* ---------- Buttons ---------- */
+      .btn {
+        position: relative; display: inline-flex; align-items: center; justify-content: center;
+        gap: 9px; padding: 15px 30px; border-radius: 16px; font-weight: 700; font-size: 15px;
+        cursor: pointer; border: none; font-family: inherit; overflow: hidden;
+        transition: transform .3s cubic-bezier(.34,1.56,.64,1), box-shadow .3s;
+      }
+      .btn svg { width: 19px; height: 19px; }
+      .btn-primary { background: var(--grad); color: #fff; box-shadow: 0 16px 34px rgba(56,189,248,.4); }
+      .btn-primary::after {
+        content: ""; position: absolute; inset: 0;
+        background: linear-gradient(270deg, var(--primary-d), var(--primary));
+        opacity: 0; transition: opacity .3s; z-index: -1;
+      }
+      .btn-primary:hover::after { opacity: 1; }
+      .btn-wa { background: var(--wa); color: #fff; box-shadow: 0 16px 34px rgba(37,211,102,.4); }
+      .btn-ghost { background: #fff; color: var(--primary); box-shadow: var(--shadow); }
+      .btn:hover { transform: translateY(-4px) scale(1.03); }
+
+      /* ---------- Section heads ---------- */
+      .eyebrow {
+        display: inline-flex; align-items: center; gap: 8px;
+        background: rgba(10,110,189,.1); color: var(--primary);
+        padding: 8px 18px; border-radius: 999px; font-size: 13px; font-weight: 800;
+        letter-spacing: .3px;
+      }
+      .eyebrow svg { width: 15px; height: 15px; }
+      .section { padding: 110px 0; position: relative; }
+      .head { max-width: 640px; margin-inline: auto; text-align: center; margin-bottom: 64px; }
+      .head h2 { font-size: clamp(30px, 4.5vw, 46px); font-weight: 900; margin-top: 18px; line-height: 1.15; }
+      .head p { margin-top: 16px; font-size: 18px; color: rgba(30,41,59,.6); }
+
+      /* ---------- Navbar ---------- */
+      header {
+        position: fixed; inset-inline: 0; top: 0; z-index: 90; padding: 20px 0;
+        transition: all .45s ease;
+      }
+      header.scrolled {
+        padding: 10px 0; background: rgba(245,250,254,.72);
+        backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+        box-shadow: 0 10px 40px rgba(10,110,189,.1);
+      }
+      .nav { display: flex; align-items: center; justify-content: space-between; }
+      .logo { display: flex; align-items: center; gap: 12px; }
+      .logo-mark {
+        position: relative; width: 50px; height: 50px; border-radius: 17px;
+        background: var(--grad); display: grid; place-items: center; color: #fff;
+        box-shadow: 0 12px 26px rgba(56,189,248,.45);
+      }
+      .logo-mark svg { width: 26px; height: 26px; }
+      .logo-mark::after {
+        content: ""; position: absolute; inset: 0; border-radius: 17px;
+        border: 2px solid rgba(255,255,255,.4);
+      }
+      .logo-text b { display: block; font-size: 19px; font-weight: 900; color: var(--dark); }
+      .logo-text span { font-size: 11px; font-weight: 700; color: var(--primary); }
+      .nav-pills {
+        display: flex; align-items: center; gap: 2px; padding: 6px;
+        border-radius: 999px;
+      }
+      .nav-pills a {
+        padding: 9px 18px; border-radius: 999px; font-size: 14px; font-weight: 700;
+        color: rgba(30,41,59,.75); transition: .25s; position: relative;
+      }
+      .nav-pills a:hover, .nav-pills a.active { color: #fff; background: var(--grad); box-shadow: 0 8px 18px rgba(56,189,248,.35); }
+      .nav-actions { display: flex; align-items: center; gap: 10px; }
+      .nav-cta { padding: 12px 24px; font-size: 14px; }
+      .burger {
+        display: none; width: 50px; height: 50px; border-radius: 15px;
+        background: rgba(10,110,189,.1); color: var(--primary); border: none; cursor: pointer; place-items: center;
+      }
+      .burger svg { width: 24px; height: 24px; }
+      .mobile {
+        display: none; margin: 12px 22px 0; padding: 14px; border-radius: 22px;
+        flex-direction: column; gap: 4px;
+      }
+      .mobile.open { display: flex; animation: drop .35s ease; }
+      .mobile a { padding: 13px 18px; border-radius: 14px; font-weight: 700; color: rgba(30,41,59,.8); }
+      .mobile a:hover { background: rgba(10,110,189,.1); color: var(--primary); }
+      .mobile .btn { margin-top: 6px; width: 100%; }
+
+      /* ---------- Floating kid shapes ---------- */
+      .floaty { position: absolute; z-index: 1; pointer-events: none; opacity: .85; animation: floatY 7s ease-in-out infinite; }
+      .floaty.slow { animation-duration: 10s; }
+      .floaty.rev { animation-direction: reverse; }
+
+      /* ---------- Hero ---------- */
+      .hero { position: relative; min-height: 100vh; display: flex; align-items: center; padding: 150px 0 90px; overflow: hidden; }
+      .hero .container { position: relative; z-index: 2; display: grid; grid-template-columns: 1.05fr .95fr; gap: 50px; align-items: center; }
+      .hero-badge {
+        display: inline-flex; align-items: center; gap: 9px; padding: 10px 20px;
+        border-radius: 999px; font-weight: 800; color: var(--primary); font-size: 14px;
+      }
+      .hero-badge .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 0 4px rgba(94,234,212,.3); animation: pulse 1.8s infinite; }
+      .hero h1 { font-size: clamp(40px, 6.5vw, 78px); font-weight: 900; line-height: 1.05; margin-top: 24px; color: var(--dark); }
+      .hero h1 .line2 { display: block; font-size: clamp(20px, 3vw, 34px); font-weight: 800; margin-top: 14px; }
+      .hero .lead { margin-top: 24px; font-size: 19px; max-width: 500px; color: rgba(30,41,59,.7); }
+      .hero-actions { margin-top: 38px; display: flex; flex-wrap: wrap; gap: 16px; }
+      .hero-trust { margin-top: 40px; display: flex; align-items: center; gap: 18px; }
+      .avatars { display: flex; }
+      .avatars span {
+        width: 44px; height: 44px; border-radius: 50%; border: 3px solid #fff; margin-inline-start: -14px;
+        background-size: cover; background-position: center; box-shadow: 0 4px 12px rgba(0,0,0,.1);
+      }
+      .avatars span:first-child { margin: 0; }
+      .hero-trust b { display: block; font-size: 16px; }
+      .hero-trust small { color: rgba(30,41,59,.55); font-size: 13px; }
+      .stars { color: var(--amber); font-size: 14px; letter-spacing: 2px; }
+
+      /* hero visual */
+      .hero-visual { position: relative; }
+      .hero-photo {
+        position: relative; margin-inline: auto; width: 100%; max-width: 440px; aspect-ratio: 4/4.6;
+        border-radius: 40% 40% 42% 42% / 46% 46% 40% 40%;
+        overflow: hidden; box-shadow: var(--shadow-lg);
+        animation: morph 12s ease-in-out infinite;
+        border: 8px solid rgba(255,255,255,.7);
+      }
+      .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
+      .hero-ring {
+        position: absolute; inset: -26px; border-radius: 50%;
+        border: 2px dashed rgba(10,110,189,.25); animation: spin 30s linear infinite;
+      }
+      .chip {
+        position: absolute; display: flex; align-items: center; gap: 10px;
+        padding: 12px 16px; border-radius: 18px; box-shadow: var(--shadow); font-weight: 800; font-size: 14px;
+        animation: floatY 6s ease-in-out infinite;
+      }
+      .chip i { width: 38px; height: 38px; border-radius: 12px; display: grid; place-items: center; font-style: normal; flex-shrink: 0; }
+      .chip small { display: block; font-weight: 600; font-size: 11px; color: rgba(30,41,59,.55); }
+      .chip.c1 { top: 14%; inset-inline-start: -6%; }
+      .chip.c2 { bottom: 18%; inset-inline-end: -8%; animation-delay: -3s; }
+      .chip.c3 { bottom: -4%; inset-inline-start: 14%; animation-delay: -1.5s; }
+
+      /* ---------- Marquee ---------- */
+      .marquee { padding: 22px 0; overflow: hidden; border-block: 1px solid rgba(10,110,189,.1); background: rgba(255,255,255,.5); }
+      .marquee-track { display: flex; gap: 60px; width: max-content; animation: scrollX 26s linear infinite; }
+      .marquee-track span { display: inline-flex; align-items: center; gap: 12px; font-weight: 800; font-size: 18px; color: rgba(10,110,189,.65); white-space: nowrap; }
+      .marquee-track svg { width: 22px; height: 22px; color: var(--secondary); }
+
+      /* ---------- About ---------- */
+      .about-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: 60px; align-items: center; }
+      .about-collage { position: relative; }
+      .about-collage .main {
+        border-radius: 36px; overflow: hidden; box-shadow: var(--shadow-lg); aspect-ratio: 4/4.3;
+      }
+      .about-collage .main img { width: 100%; height: 100%; object-fit: cover; }
+      .about-collage .sub {
+        position: absolute; bottom: -34px; inset-inline-start: -26px; width: 46%;
+        border-radius: 26px; overflow: hidden; border: 6px solid #fff; box-shadow: var(--shadow);
+        aspect-ratio: 4/3.4;
+      }
+      .about-collage .sub img { width: 100%; height: 100%; object-fit: cover; }
+      .about-collage .float-card {
+        position: absolute; top: -26px; inset-inline-end: -10px; padding: 16px 20px;
+        border-radius: 20px; box-shadow: var(--shadow); text-align: center; animation: floatY 6s ease-in-out infinite;
+      }
+      .about-collage .float-card b { display: block; font-size: 30px; font-weight: 900; }
+      .about-collage .float-card span { font-size: 12px; font-weight: 700; color: rgba(30,41,59,.6); }
+      .about-text h2 { font-size: clamp(30px, 4.2vw, 42px); font-weight: 900; margin-top: 18px; line-height: 1.18; }
+      .about-text h2 small { display: block; font-size: 20px; font-weight: 800; color: var(--primary); margin-top: 8px; }
+      .about-text .desc { margin-top: 22px; font-size: 18px; color: rgba(30,41,59,.7); }
+      .checks { margin-top: 24px; display: grid; gap: 14px; }
+      .checks li { display: flex; align-items: center; gap: 14px; font-weight: 600; }
+      .checks i {
+        width: 30px; height: 30px; border-radius: 10px; background: rgba(94,234,212,.2); color: #0d9488;
+        display: grid; place-items: center; flex-shrink: 0; font-style: normal;
+      }
+      .checks i svg { width: 16px; height: 16px; }
+      .counters { margin-top: 36px; display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+      .counter { padding: 22px 14px; border-radius: 22px; text-align: center; box-shadow: var(--shadow); }
+      .counter b { display: block; font-size: 30px; font-weight: 900; }
+      .counter b .grad-text { font-size: inherit; }
+      .counter span { font-size: 13px; font-weight: 700; color: rgba(30,41,59,.6); }
+
+      /* ---------- Services bento ---------- */
+      .bento { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 1fr; gap: 22px; }
+      .bento-card {
+        position: relative; padding: 30px; border-radius: 30px; overflow: hidden;
+        background: #fff; box-shadow: var(--shadow); transition: transform .4s cubic-bezier(.34,1.56,.64,1), box-shadow .4s;
+        display: flex; flex-direction: column; justify-content: flex-end; min-height: 220px;
+      }
+      .bento-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); }
+      .bento-card .b-icon {
+        width: 64px; height: 64px; border-radius: 20px; display: grid; place-items: center;
+        font-size: 32px; box-shadow: 0 12px 26px rgba(0,0,0,.08); transition: transform .4s;
+      }
+      .bento-card:hover .b-icon { transform: rotate(-8deg) scale(1.08); }
+      .bento-card h3 { margin-top: 18px; font-size: 21px; font-weight: 900; }
+      .bento-card p { margin-top: 10px; color: rgba(30,41,59,.6); font-size: 15px; }
+      .bento-card .glow {
+        position: absolute; inset-inline-end: -50px; top: -50px; width: 140px; height: 140px;
+        border-radius: 50%; opacity: .12; transition: transform .5s;
+      }
+      .bento-card:hover .glow { transform: scale(2); }
+      /* feature card spanning */
+      .bento-card.feature {
+        grid-column: span 2; grid-row: span 2; color: #fff; justify-content: space-between;
+        background: linear-gradient(150deg, var(--primary), var(--secondary));
+      }
+      .bento-card.feature h3 { font-size: 28px; }
+      .bento-card.feature p { color: rgba(255,255,255,.85); font-size: 17px; }
+      .bento-card.feature .b-icon { background: rgba(255,255,255,.18); }
+      .bento-card.wide { grid-column: span 2; min-height: 200px; }
+
+      /* ---------- Steps ---------- */
+      .steps-sec { position: relative; overflow: hidden; }
+      .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; position: relative; }
+      .step { text-align: center; position: relative; }
+      .step .num {
+        width: 80px; height: 80px; margin-inline: auto; border-radius: 26px;
+        background: #fff; display: grid; place-items: center; box-shadow: var(--shadow);
+        font-family: "Lalezar"; font-size: 34px; color: var(--primary); position: relative; z-index: 2;
+        transition: transform .35s;
+      }
+      .step:hover .num { transform: translateY(-8px) rotate(-6deg); }
+      .step .num svg { width: 34px; height: 34px; color: var(--primary); }
+      .step h3 { margin-top: 20px; font-size: 19px; font-weight: 900; }
+      .step p { margin-top: 8px; color: rgba(30,41,59,.6); font-size: 15px; }
+      .steps::before {
+        content: ""; position: absolute; top: 40px; inset-inline: 12%; height: 2px;
+        background: repeating-linear-gradient(90deg, var(--accent) 0 10px, transparent 10px 20px);
+        z-index: 1;
+      }
+
+      /* ---------- Why us ---------- */
+      .why { position: relative; overflow: hidden; }
+      .why::before { content: ""; position: absolute; inset: 0; background: linear-gradient(150deg, #0a4f8c, var(--primary) 50%, #0c7fd4); }
+      .why::after { content: ""; position: absolute; inset: 0; opacity: .16; background: radial-gradient(circle at 18% 20%, #fff, transparent 38%), radial-gradient(circle at 82% 78%, #fff, transparent 38%); }
+      .why .container { position: relative; z-index: 1; }
+      .why .head h2 { color: #fff; }
+      .why .head p { color: rgba(255,255,255,.8); }
+      .why .eyebrow { background: rgba(255,255,255,.18); color: #fff; }
+      .why-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 22px; }
+      .why-card { padding: 30px; border-radius: 28px; text-align: center; color: #fff; transition: transform .35s; }
+      .why-card:hover { transform: translateY(-10px); }
+      .why-icon { width: 70px; height: 70px; margin-inline: auto; border-radius: 22px; background: rgba(255,255,255,.16); display: grid; place-items: center; }
+      .why-icon svg { width: 32px; height: 32px; }
+      .why-card h3 { margin-top: 20px; font-size: 19px; font-weight: 900; }
+      .why-card p { margin-top: 12px; font-size: 14px; color: rgba(255,255,255,.78); }
+
+      /* ---------- Testimonials ---------- */
+      .testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+      .testi { padding: 32px; border-radius: 28px; box-shadow: var(--shadow); background: #fff; position: relative; }
+      .testi .quote { position: absolute; top: 20px; inset-inline-end: 26px; font-family: "Lalezar"; font-size: 60px; color: rgba(56,189,248,.2); line-height: 1; }
+      .testi .stars { font-size: 16px; }
+      .testi p { margin-top: 14px; color: rgba(30,41,59,.75); font-size: 16px; }
+      .testi .who { margin-top: 20px; display: flex; align-items: center; gap: 12px; }
+      .testi .who .av { width: 48px; height: 48px; border-radius: 50%; background: var(--grad-soft); display: grid; place-items: center; font-weight: 900; color: var(--primary); font-size: 18px; }
+      .testi .who b { font-size: 15px; }
+      .testi .who small { color: rgba(30,41,59,.55); font-size: 13px; }
+
+      /* ---------- Booking ---------- */
+      .booking-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: 56px; align-items: center; }
+      .booking-info h2 { font-size: clamp(30px,4.2vw,42px); font-weight: 900; margin-top: 18px; line-height: 1.18; }
+      .booking-info .desc { margin-top: 20px; font-size: 18px; color: rgba(30,41,59,.7); }
+      .perks { margin-top: 30px; display: grid; gap: 14px; }
+      .perk { display: flex; align-items: center; gap: 14px; padding: 15px 18px; border-radius: 18px; font-weight: 700; }
+      .perk i { width: 38px; height: 38px; border-radius: 12px; background: var(--grad); color: #fff; display: grid; place-items: center; font-style: normal; flex-shrink: 0; }
+      .booking-form { padding: 38px; border-radius: 34px; box-shadow: var(--shadow-lg); }
+      .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+      .field { display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
+      .field label { font-size: 14px; font-weight: 800; }
+      .field input, .field textarea {
+        padding: 14px 16px; border-radius: 14px; border: 1.5px solid rgba(10,110,189,.15);
+        background: rgba(255,255,255,.7); font-family: inherit; font-size: 14px; font-weight: 600;
+        color: var(--dark); outline: none; transition: .25s;
+      }
+      .field input::placeholder, .field textarea::placeholder { color: rgba(30,41,59,.35); }
+      .field input:focus, .field textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 4px rgba(56,189,248,.18); }
+      .field textarea { resize: none; }
+      .booking-form .btn { width: 100%; margin-top: 6px; }
+
+      /* ---------- Contact ---------- */
+      .contact-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+      .contact-card { padding: 34px; border-radius: 28px; text-align: center; box-shadow: var(--shadow); background: #fff; transition: transform .35s; }
+      .contact-card:hover { transform: translateY(-10px); }
+      .contact-icon { width: 70px; height: 70px; margin-inline: auto; border-radius: 22px; background: var(--grad); color: #fff; display: grid; place-items: center; box-shadow: 0 14px 28px rgba(56,189,248,.4); }
+      .contact-icon svg { width: 32px; height: 32px; }
+      .contact-card h3 { margin-top: 20px; font-size: 19px; font-weight: 900; }
+      .contact-card p { margin-top: 12px; color: rgba(30,41,59,.6); white-space: pre-line; }
+      .contact-actions { margin-top: 44px; display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+
+      /* ---------- CTA banner ---------- */
+      .cta-banner {
+        position: relative; overflow: hidden; border-radius: 40px; padding: 64px 50px; text-align: center; color: #fff;
+        background: linear-gradient(150deg, var(--primary), var(--secondary));
+        box-shadow: var(--shadow-lg);
+      }
+      .cta-banner::after { content: ""; position: absolute; inset: 0; opacity: .15; background: radial-gradient(circle at 20% 30%, #fff, transparent 40%), radial-gradient(circle at 80% 70%, #fff, transparent 40%); }
+      .cta-banner h2 { position: relative; font-size: clamp(28px,4vw,44px); font-weight: 900; }
+      .cta-banner p { position: relative; margin-top: 14px; font-size: 18px; color: rgba(255,255,255,.88); }
+      .cta-banner .btns { position: relative; margin-top: 34px; display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+      .cta-banner .btn-light { background: #fff; color: var(--primary); }
+
+      /* ---------- Footer ---------- */
+      footer { position: relative; background: var(--dark); color: #fff; overflow: hidden; margin-top: 110px; }
+      footer .fblob { position: absolute; border-radius: 50%; filter: blur(80px); }
+      footer .fblob.one { top: -80px; inset-inline-end: 60px; width: 260px; height: 260px; background: rgba(10,110,189,.35); }
+      footer .fblob.two { bottom: -90px; inset-inline-start: 60px; width: 260px; height: 260px; background: rgba(56,189,248,.22); }
+      .footer-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 44px; padding: 72px 0 0; }
+      .footer-brand p { margin-top: 20px; color: rgba(255,255,255,.6); }
+      .footer-social { margin-top: 24px; display: flex; gap: 12px; }
+      .footer-social a { width: 44px; height: 44px; border-radius: 14px; background: rgba(255,255,255,.1); display: grid; place-items: center; transition: .25s; }
+      .footer-social a:hover { background: var(--primary); transform: translateY(-4px); }
+      .footer-social svg { width: 20px; height: 20px; }
+      .footer-col h4 { font-size: 18px; font-weight: 900; }
+      .footer-col ul { margin-top: 22px; display: grid; gap: 13px; }
+      .footer-col a, .footer-col li { color: rgba(255,255,255,.6); transition: .25s; }
+      .footer-col a:hover { color: var(--secondary); }
+      .footer-contact li { display: flex; align-items: flex-start; gap: 12px; }
+      .footer-contact svg { width: 20px; height: 20px; color: var(--secondary); flex-shrink: 0; margin-top: 3px; }
+      .footer-bottom { position: relative; z-index: 1; margin-top: 52px; padding: 24px 0; border-top: 1px solid rgba(255,255,255,.1); text-align: center; font-size: 14px; color: rgba(255,255,255,.5); }
+
+      /* ---------- Floating actions ---------- */
+      .fab { position: fixed; inset-inline-start: 24px; z-index: 80; width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center; color: #fff; box-shadow: 0 14px 30px rgba(0,0,0,.2); transition: transform .3s; }
+      .fab:hover { transform: scale(1.1); }
+      .fab svg { width: 27px; height: 27px; position: relative; z-index: 1; }
+      .fab.wa { bottom: 24px; background: var(--wa); }
+      .fab.wa::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: rgba(37,211,102,.5); animation: ping 1.8s cubic-bezier(0,0,.2,1) infinite; }
+      .fab.top { bottom: 92px; background: var(--grad); opacity: 0; pointer-events: none; }
+      .fab.top.show { opacity: 1; pointer-events: auto; }
+
+      /* ---------- Reveal ---------- */
+      .reveal { opacity: 0; transform: translateY(46px); transition: opacity .8s ease, transform .8s cubic-bezier(.22,1,.36,1); }
+      .reveal.in { opacity: 1; transform: none; }
+      .reveal.d1 { transition-delay: .1s; } .reveal.d2 { transition-delay: .2s; }
+      .reveal.d3 { transition-delay: .3s; } .reveal.d4 { transition-delay: .4s; }
+      .reveal.d5 { transition-delay: .5s; } .reveal.d6 { transition-delay: .6s; }
+
+      /* ---------- Keyframes ---------- */
+      @keyframes drift { 0%,100% { transform: translate(0,0) scale(1); } 33% { transform: translate(40px,-30px) scale(1.1); } 66% { transform: translate(-30px,25px) scale(.95); } }
+      @keyframes floatY { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-18px); } }
+      @keyframes morph { 0%,100% { border-radius: 40% 40% 42% 42% / 46% 46% 40% 40%; } 50% { border-radius: 44% 36% 38% 46% / 40% 50% 42% 44%; } }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      @keyframes pulse { 0%,100% { box-shadow: 0 0 0 4px rgba(94,234,212,.3); } 50% { box-shadow: 0 0 0 8px rgba(94,234,212,0); } }
+      @keyframes ping { 75%,100% { transform: scale(2.1); opacity: 0; } }
+      @keyframes scrollX { to { transform: translateX(50%); } }
+      @keyframes drop { from { opacity: 0; transform: translateY(-12px); } to { opacity: 1; transform: none; } }
+
+      /* ---------- Responsive ---------- */
+      @media (max-width: 1000px) {
+        .nav-pills, .nav-cta { display: none; }
+        .burger { display: grid; }
+        .hero .container, .about-grid, .booking-grid { grid-template-columns: 1fr; }
+        .hero-visual { display: none; }
+        .bento { grid-template-columns: repeat(2,1fr); }
+        .bento-card.feature, .bento-card.wide { grid-column: span 2; grid-row: auto; }
+        .why-grid, .steps, .testi-grid, .contact-grid { grid-template-columns: repeat(2,1fr); }
+        .steps::before { display: none; }
+        .footer-grid { grid-template-columns: 1fr 1fr; }
+      }
+      @media (max-width: 620px) {
+        .section { padding: 78px 0; }
+        .bento, .why-grid, .steps, .testi-grid, .contact-grid, .form-row, .footer-grid { grid-template-columns: 1fr; }
+        .counters { grid-template-columns: repeat(3,1fr); gap: 10px; }
+        .counter { padding: 16px 8px; } .counter b { font-size: 22px; }
+        .hero { text-align: center; }
+        .hero-actions, .hero-trust { justify-content: center; }
+        .about-collage .sub { position: static; width: 100%; margin-top: 16px; border: none; }
+        .about-collage .float-card { inset-inline-end: 0; }
+        .cta-banner { padding: 46px 26px; border-radius: 30px; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="progress" id="progress"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="aurora"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+
+    <!-- ============================= HEADER ============================= -->
+    <header id="header">
+      <div class="container nav">
+        <a href="#home" class="logo">
+          <span class="logo-mark" data-icon="stethoscope"></span>
+          <span class="logo-text"><b>د. محمد حسني</b><span>شركاء في صحة طفلك</span></span>
+        </a>
+        <nav class="nav-pills glass" id="navLinks"></nav>
+        <div class="nav-actions">
+          <a href="#booking" class="btn btn-primary nav-cta"><span data-icon="calendar"></span> حجز موعد</a>
+          <button class="burger" id="burger" aria-label="القائمة"><span data-icon="menu"></span></button>
+        </div>
+      </div>
+      <nav class="mobile glass" id="mobileMenu"></nav>
+    </header>
+
+    <!-- ============================= HERO ============================= -->
+    <section class="hero" id="home">
+      <span class="floaty slow" style="top:18%; inset-inline-start:8%" data-shape="balloon"></span>
+      <span class="floaty rev" style="top:62%; inset-inline-start:4%" data-shape="star"></span>
+      <span class="floaty" style="top:24%; inset-inline-end:6%" data-shape="cloud"></span>
+      <div class="container">
+        <div>
+          <span class="hero-badge glass reveal"><span class="dot"></span> شركاء في صحة طفلك</span>
+          <h1 class="reveal d1">
+            رعاية <span class="grad-text display">استثنائية</span>
+            <span class="line2">لطفلك مع <b class="grad-text">د. محمد حسني</b></span>
+          </h1>
+          <p class="lead reveal d2">
+            أخصائي الأطفال وحديثي الولادة — متابعة دقيقة لصحة ونمو طفلك في بيئة آمنة ومريحة تناسب الصغار والأمهات.
+          </p>
+          <div class="hero-actions reveal d3">
+            <a href="#booking" class="btn btn-primary"><span data-icon="calendar"></span> احجز موعد الآن</a>
+            <a class="btn btn-wa" target="_blank" rel="noopener" data-wa="مرحباً، أرغب في حجز موعد مع د. محمد حسني"><span data-icon="whatsapp"></span> تواصل واتساب</a>
+          </div>
+          <div class="hero-trust reveal d4">
+            <div class="avatars" id="avatars"></div>
+            <div>
+              <div class="stars">★★★★★</div>
+              <b>ثقة آلاف الأسر</b>
+              <small>رعاية موثوقة لأطفالهم</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal d2">
+          <div class="hero-ring"></div>
+          <div class="hero-photo"><img src="/images/doctor.jpg" alt="د. محمد حسني" /></div>
+          <div class="chip c1 glass"><i style="background:rgba(94,234,212,.2);color:#0d9488" data-icon="heart"></i><div><b>+10</b><small>سنوات خبرة</small></div></div>
+          <div class="chip c2 glass"><i style="background:rgba(56,189,248,.2);color:var(--primary)" data-icon="baby"></i><div><b>رعاية</b><small>مميزة للأطفال</small></div></div>
+          <div class="chip c3 glass"><i style="background:rgba(251,191,36,.2);color:#d97706" data-icon="shield"></i><div><b>بيئة آمنة</b><small>أعلى المعايير</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= MARQUEE ============================= -->
+    <div class="marquee"><div class="marquee-track" id="marquee"></div></div>
+
+    <!-- ============================= ABOUT ============================= -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-collage reveal">
+          <div class="main"><img src="/images/care.jpg" alt="رعاية الأطفال" /></div>
+          <div class="sub"><img src="/images/baby.jpg" alt="طفل سعيد" /></div>
+          <div class="float-card glass"><b class="grad-text">😊</b><span>أطفال أصحاء</span></div>
+        </div>
+        <div class="about-text reveal d1">
+          <span class="eyebrow"><span data-icon="user"></span> نبذة عن الطبيب</span>
+          <h2>طبيب يفهم احتياجات طفلك<small>د. محمد حسني — أخصائي الأطفال وحديثي الولادة</small></h2>
+          <p class="desc">نقدم رعاية طبية متخصصة للأطفال وحديثي الولادة مع الاهتمام بصحة الطفل وراحة الأسرة، عبر تشخيص دقيق ومتابعة مستمرة.</p>
+          <ul class="checks" id="checks"></ul>
+          <div class="counters" id="counters"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= SERVICES (BENTO) ============================= -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="head reveal">
+          <span class="eyebrow"><span data-icon="grid"></span> خدماتنا الطبية</span>
+          <h2>رعاية <span class="grad-text">متكاملة</span> لصحة طفلك</h2>
+          <p>مجموعة شاملة من الخدمات الطبية المتخصصة للأطفال وحديثي الولادة</p>
+        </div>
+        <div class="bento" id="bento"></div>
+      </div>
+    </section>
+
+    <!-- ============================= STEPS ============================= -->
+    <section class="section steps-sec">
+      <div class="container">
+        <div class="head reveal">
+          <span class="eyebrow"><span data-icon="route"></span> كيف نعمل</span>
+          <h2>حجز موعدك في <span class="grad-text">٤ خطوات</span></h2>
+          <p>عملية بسيطة وسريعة لتأكيد موعد طفلك بكل سهولة</p>
+        </div>
+        <div class="steps" id="steps"></div>
+      </div>
+    </section>
+
+    <!-- ============================= WHY US ============================= -->
+    <section class="section why">
+      <div class="container">
+        <div class="head reveal">
+          <span class="eyebrow"><span data-icon="award"></span> لماذا تختارنا</span>
+          <h2>ثقة الأمهات وراحة الأطفال أولويتنا</h2>
+          <p>نلتزم بتقديم أعلى مستويات الرعاية الطبية في بيئة آمنة ومريحة</p>
+        </div>
+        <div class="why-grid" id="whyGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============================= TESTIMONIALS ============================= -->
+    <section class="section" id="testi">
+      <div class="container">
+        <div class="head reveal">
+          <span class="eyebrow"><span data-icon="heart"></span> آراء الأهالي</span>
+          <h2>ماذا يقول <span class="grad-text">أولياء الأمور</span></h2>
+          <p>تجارب حقيقية لأسر وثقت في رعاية د. محمد حسني لأطفالهم</p>
+        </div>
+        <div class="testi-grid" id="testiGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============================= BOOKING ============================= -->
+    <section class="section" id="booking">
+      <div class="container booking-grid">
+        <div class="booking-info reveal">
+          <span class="eyebrow"><span data-icon="calendar"></span> حجز موعد</span>
+          <h2>احجز موعد طفلك بسهولة</h2>
+          <p class="desc">املأ البيانات التالية وسيتم إرسال طلب الحجز مباشرة عبر واتساب لتأكيد الموعد في أقرب وقت.</p>
+          <div class="perks" id="perks"></div>
+        </div>
+        <form class="booking-form glass reveal d1" id="bookingForm">
+          <div class="form-row">
+            <div class="field"><label>اسم ولي الأمر</label><input name="parentName" required placeholder="ادخل اسمك" /></div>
+            <div class="field"><label>اسم الطفل</label><input name="childName" required placeholder="اسم الطفل" /></div>
+            <div class="field"><label>عمر الطفل</label><input name="childAge" required placeholder="مثال: 6 أشهر" /></div>
+            <div class="field"><label>رقم الهاتف</label><input name="phone" type="tel" required placeholder="01xxxxxxxxx" /></div>
+          </div>
+          <div class="field"><label>سبب الزيارة</label><textarea name="reason" rows="3" required placeholder="اكتب سبب الزيارة..."></textarea></div>
+          <button type="submit" class="btn btn-wa"><span data-icon="send"></span> إرسال عبر واتساب</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============================= CONTACT ============================= -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="head reveal">
+          <span class="eyebrow"><span data-icon="pin"></span> تواصل معنا</span>
+          <h2>بيانات <span class="grad-text">العيادة</span></h2>
+          <p>نحن في خدمتك، يمكنك زيارتنا أو التواصل معنا في أي وقت</p>
+        </div>
+        <div class="contact-grid" id="contactGrid"></div>
+        <div class="contact-actions reveal">
+          <a class="btn btn-primary" id="callBtn"><span data-icon="phone"></span> اتصل الآن</a>
+          <a class="btn btn-wa" id="waContactBtn" target="_blank" rel="noopener"><span data-icon="whatsapp"></span> راسلنا واتساب</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= CTA BANNER ============================= -->
+    <section class="container">
+      <div class="cta-banner reveal">
+        <h2>صحة طفلك تبدأ بخطوة واحدة</h2>
+        <p>احجز موعدك الآن ودع رعاية أطفالك بين أيدٍ أمينة وخبيرة.</p>
+        <div class="btns">
+          <a href="#booking" class="btn btn-light"><span data-icon="calendar"></span> احجز موعد الآن</a>
+          <a class="btn btn-wa" target="_blank" rel="noopener" data-wa="مرحباً، أرغب في حجز موعد مع د. محمد حسني"><span data-icon="whatsapp"></span> تواصل واتساب</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= FOOTER ============================= -->
+    <footer>
+      <span class="fblob one"></span><span class="fblob two"></span>
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-mark" data-icon="stethoscope"></span>
+            <span class="logo-text"><b>د. محمد حسني</b><span style="color:var(--secondary)">شركاء في صحة طفلك</span></span>
+          </div>
+          <p>أخصائي الأطفال وحديثي الولادة — رعاية طبية متخصصة لطفلك مع متابعة دقيقة لصحة ونمو الأطفال.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="موقع"><span data-icon="globe"></span></a>
+            <a href="#" aria-label="بريد"><span data-icon="mail"></span></a>
+            <a id="waFooter" target="_blank" rel="noopener" aria-label="واتساب"><span data-icon="whatsapp"></span></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>روابط سريعة</h4><ul id="footerLinks"></ul></div>
+        <div class="footer-col">
+          <h4>تواصل معنا</h4>
+          <ul class="footer-contact">
+            <li><span data-icon="pin"></span><span>الفيوم - بجوار مستشفى الندى - أعلى مركز النجح للعلاج الطبيعي</span></li>
+            <li><span data-icon="phone"></span><a href="tel:01002706919" dir="ltr">01002706919</a></li>
+            <li><span data-icon="clock"></span><span>يومياً 3:30م - 7:30م (ما عدا الجمعة)</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© <span id="year"></span> د. محمد حسني — جميع الحقوق محفوظة.</div>
+    </footer>
+
+    <a class="fab top" id="toTop" aria-label="للأعلى"><span data-icon="up"></span></a>
+    <a class="fab wa" id="waFloat" target="_blank" rel="noopener" aria-label="واتساب"><span data-icon="whatsapp"></span></a>
+
+    <!-- ================================ JS ================================ -->
+    <script>
+      const DATA = {
+        whatsapp: "201002706919",
+        phone: "01002706919",
+        nav: [
+          { label: "الرئيسية", href: "#home" },
+          { label: "عن الطبيب", href: "#about" },
+          { label: "الخدمات", href: "#services" },
+          { label: "آراء", href: "#testi" },
+          { label: "الحجز", href: "#booking" },
+          { label: "تواصل", href: "#contact" },
+        ],
+        marquee: ["متابعة حديثي الولادة","متابعة النمو","التطعيمات","علاج أمراض الأطفال","متابعة التغذية","الجهاز التنفسي","رعاية شاملة"],
+        checks: ["متابعة دقيقة لصحة ونمو الطفل","اهتمام خاص براحة الأسرة","تشخيص دقيق وخطة علاج واضحة","بيئة ودودة تناسب الأطفال"],
+        counters: [
+          { value: 10, suffix: "+", label: "سنوات خبرة" },
+          { value: 5000, suffix: "+", label: "طفل سعيد" },
+          { value: 100, suffix: "%", label: "رضا الأهالي" },
+        ],
+        services: [
+          { emoji:"👶", title:"متابعة حديثي الولادة", desc:"رعاية شاملة منذ اللحظة الأولى لحياة طفلك.", feature:true, color:"#38bdf8" },
+          { emoji:"🍼", title:"متابعة نمو الطفل", desc:"مراقبة الوزن والطول ومعدلات النمو.", color:"#5eead4" },
+          { emoji:"🌡", title:"علاج أمراض الأطفال", desc:"تشخيص وعلاج دقيق للأمراض الشائعة.", color:"#fb7185" },
+          { emoji:"🥗", title:"متابعة التغذية", desc:"إرشادات تغذية لكل مرحلة عمرية.", wide:true, color:"#fbbf24" },
+          { emoji:"🫁", title:"الجهاز التنفسي", desc:"علاج مشاكل التنفس والحساسية.", color:"#a78bfa" },
+          { emoji:"💉", title:"التطعيمات", desc:"وفق الجداول المعتمدة بدقة.", color:"#0a6ebd" },
+          { emoji:"❤️", title:"متابعة صحة الطفل", desc:"كشف دوري شامل لسلامة طفلك.", wide:true, color:"#fb7185" },
+        ],
+        steps: [
+          { icon:"edit", title:"املأ النموذج", desc:"أدخل بيانات طفلك بسهولة." },
+          { icon:"whatsapp", title:"أرسل عبر واتساب", desc:"يصلنا طلبك مباشرة." },
+          { icon:"clock", title:"تأكيد الموعد", desc:"نتواصل لتحديد الوقت." },
+          { icon:"heart", title:"زيارة العيادة", desc:"رعاية متخصصة لطفلك." },
+        ],
+        why: [
+          { icon:"stethoscope", title:"خبرة طبية", desc:"سنوات من الخبرة في طب الأطفال وحديثي الولادة." },
+          { icon:"baby", title:"اهتمام خاص بالأطفال", desc:"تعامل لطيف يجعل الزيارة تجربة مريحة." },
+          { icon:"shield", title:"بيئة آمنة", desc:"عيادة مجهزة بأعلى معايير النظافة." },
+          { icon:"clock", title:"متابعة مستمرة", desc:"متابعة دورية لتطور طفلك الصحي." },
+        ],
+        testimonials: [
+          { name:"أم يوسف", role:"الفيوم", text:"دكتور رائع ومتابعته دقيقة جداً، ابني تحسن بسرعة والتعامل في غاية اللطف." },
+          { name:"أم ملك", role:"الفيوم", text:"أفضل دكتور أطفال تعاملت معه، يشرح كل شيء بصبر ويهتم براحة الطفل والأم." },
+          { name:"أم آدم", role:"الفيوم", text:"العيادة نظيفة ومريحة والدكتور متمكن جداً. أنصح كل أم بزيارته دون تردد." },
+        ],
+        perks: ["استجابة سريعة لتأكيد الموعد","مرونة في اختيار الوقت المناسب","متابعة كاملة لحالة طفلك"],
+        contact: [
+          { icon:"pin", title:"عنوان العيادة", text:"الفيوم - بجوار مستشفى الندى - أعلى مركز النجح للعلاج الطبيعي" },
+          { icon:"clock", title:"مواعيد العمل", text:"يومياً (ما عدا الجمعة)\n3:30 مساءً - 7:30 مساءً" },
+          { icon:"phone", title:"رقم الهاتف", text:"01002706919" },
+        ],
+      };
+
+      const ICONS = {
+        stethoscope:'<path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6 6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6 6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/>',
+        calendar:'<path d="M8 2v4M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/>',
+        menu:'<path d="M4 12h16M4 6h16M4 18h16"/>',
+        heart:'<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>',
+        whatsapp:'<path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/>',
+        shield:'<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1Z"/>',
+        baby:'<path d="M9 12h.01M15 12h.01M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"/><path d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1"/>',
+        send:'<path d="M14.5 9.5 21 3m0 0-6.5 18a.55.55 0 0 1-1 0L10 14l-7-3.5a.55.55 0 0 1 0-1L21 3"/>',
+        phone:'<path d="M13.83 19.58a16 16 0 0 1-7.4-7.41 2 2 0 0 1 .26-2.13L8.1 8.34a1 1 0 0 0 .15-1L6.9 4.2A1 1 0 0 0 5.86 3.6L3 4a2 2 0 0 0-1.6 2.3A18 18 0 0 0 17.7 22.6 2 2 0 0 0 20 21l.36-2.86a1 1 0 0 0-.6-1.04l-3.13-1.34a1 1 0 0 0-1 .15l-1.7 1.41a2 2 0 0 1-2.14.26"/>',
+        pin:'<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>',
+        clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+        globe:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18"/>',
+        mail:'<rect width="20" height="16" x="2" y="4" rx="2"/><path d="m2 7 10 6 10-6"/>',
+        check:'<path d="M21.8 6 9.5 18.3 2.2 11"/>',
+        user:'<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',
+        grid:'<rect width="7" height="7" x="3" y="3" rx="1.5"/><rect width="7" height="7" x="14" y="3" rx="1.5"/><rect width="7" height="7" x="3" y="14" rx="1.5"/><rect width="7" height="7" x="14" y="14" rx="1.5"/>',
+        route:'<circle cx="6" cy="19" r="3"/><circle cx="18" cy="5" r="3"/><path d="M9 19h6a4 4 0 0 0 4-4V8M15 5H9a4 4 0 0 0-4 4v7"/>',
+        award:'<circle cx="12" cy="8" r="6"/><path d="M8.5 13 7 22l5-3 5 3-1.5-9"/>',
+        edit:'<path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/>',
+        up:'<path d="M12 19V5M5 12l7-7 7 7"/>',
+      };
+      const icon = (n) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ICONS[n]||""}</svg>`;
+      const SHAPES = {
+        balloon:'<svg width="58" height="80" viewBox="0 0 58 80"><ellipse cx="29" cy="28" rx="26" ry="30" fill="#fb7185" opacity=".85"/><path d="M29 58 L25 66 H33 Z" fill="#fb7185"/><path d="M29 66 q4 8 0 14" stroke="#94a3b8" fill="none" stroke-width="1.5"/></svg>',
+        star:'<svg width="50" height="50" viewBox="0 0 50 50"><path d="M25 3 31 19 48 19 34 30 39 47 25 37 11 47 16 30 2 19 19 19Z" fill="#fbbf24" opacity=".85"/></svg>',
+        cloud:'<svg width="90" height="56" viewBox="0 0 90 56"><path d="M22 46a16 16 0 0 1 2-31 20 20 0 0 1 38 4 14 14 0 0 1 4 27Z" fill="#bae6fd" opacity=".9"/></svg>',
+      };
+
+      const $ = (s) => document.querySelector(s);
+      const wa = (t) => "https://wa.me/" + DATA.whatsapp + (t ? "?text=" + encodeURIComponent(t) : "");
+
+      document.querySelectorAll("[data-icon]").forEach((el) => (el.innerHTML = icon(el.dataset.icon)));
+      document.querySelectorAll("[data-shape]").forEach((el) => (el.innerHTML = SHAPES[el.dataset.shape]));
+
+      // Nav
+      $("#navLinks").innerHTML = DATA.nav.map((l,i) => `<a href="${l.href}" class="${i===0?'active':''}">${l.label}</a>`).join("");
+      $("#mobileMenu").innerHTML = DATA.nav.map((l) => `<a href="${l.href}">${l.label}</a>`).join("") + `<a href="#booking" class="btn btn-primary">${icon("calendar")} حجز موعد</a>`;
+      $("#footerLinks").innerHTML = DATA.nav.map((l) => `<li><a href="${l.href}">${l.label}</a></li>`).join("");
+
+      // Avatars
+      const avs = ["/images/baby.jpg","/images/care.jpg","/images/doctor.jpg","/images/hero.jpg"];
+      $("#avatars").innerHTML = avs.map((a) => `<span style="background-image:url('${a}')"></span>`).join("");
+
+      // Marquee (doubled for seamless loop)
+      const mq = DATA.marquee.map((m) => `<span>${icon("heart")} ${m}</span>`).join("");
+      $("#marquee").innerHTML = mq + mq;
+
+      // About
+      $("#checks").innerHTML = DATA.checks.map((c) => `<li><i>${icon("check")}</i><span>${c}</span></li>`).join("");
+      $("#counters").innerHTML = DATA.counters.map((c) => `<div class="counter glass"><b class="grad-text"><span class="num" data-target="${c.value}">0</span>${c.suffix}</b><span>${c.label}</span></div>`).join("");
+
+      // Services bento
+      $("#bento").innerHTML = DATA.services.map((s) => {
+        const cls = s.feature ? "feature" : s.wide ? "wide" : "";
+        const iconBg = s.feature ? "" : `style="background:${s.color}1f;color:${s.color}"`;
+        return `<article class="bento-card ${cls} reveal">
+          <span class="glow" style="background:${s.color}"></span>
+          <div class="b-icon" ${iconBg}>${s.emoji}</div>
+          <div><h3>${s.title}</h3><p>${s.desc}</p></div>
+        </article>`;
+      }).join("");
+
+      // Steps
+      $("#steps").innerHTML = DATA.steps.map((s,i) => `<div class="step reveal d${i+1}"><div class="num">${i===1?icon('whatsapp'):i===2?icon('clock'):i===3?icon('heart'):icon('edit')}</div><h3>${s.title}</h3><p>${s.desc}</p></div>`).join("");
+
+      // Why
+      $("#whyGrid").innerHTML = DATA.why.map((w,i) => `<div class="why-card glass-dark reveal d${i+1}"><div class="why-icon">${icon(w.icon)}</div><h3>${w.title}</h3><p>${w.desc}</p></div>`).join("");
+
+      // Testimonials
+      $("#testiGrid").innerHTML = DATA.testimonials.map((t,i) => `<div class="testi reveal d${i+1}"><span class="quote">”</span><div class="stars">★★★★★</div><p>${t.text}</p><div class="who"><span class="av">${t.name.replace('أم ','')[0]}</span><div><b>${t.name}</b><small>${t.role}</small></div></div></div>`).join("");
+
+      // Perks
+      $("#perks").innerHTML = DATA.perks.map((p) => `<div class="perk glass"><i>✓</i><span>${p}</span></div>`).join("");
+
+      // Contact
+      $("#contactGrid").innerHTML = DATA.contact.map((c,i) => `<div class="contact-card reveal d${i+1}"><div class="contact-icon">${icon(c.icon)}</div><h3>${c.title}</h3><p>${c.text}</p></div>`).join("");
+
+      // WA links
+      document.querySelectorAll("[data-wa]").forEach((el) => (el.href = wa(el.dataset.wa)));
+      $("#waContactBtn").href = wa(""); $("#waFooter").href = wa(""); $("#waFloat").href = wa("");
+      $("#callBtn").href = "tel:" + DATA.phone;
+      $("#year").textContent = new Date().getFullYear();
+
+      // Header + progress + toTop
+      const header = $("#header"), progress = $("#progress"), toTop = $("#toTop");
+      function onScroll() {
+        const y = window.scrollY;
+        header.classList.toggle("scrolled", y > 40);
+        const h = document.documentElement.scrollHeight - innerHeight;
+        progress.style.width = (y / h) * 100 + "%";
+        toTop.classList.toggle("show", y > 600);
+      }
+      addEventListener("scroll", onScroll); onScroll();
+      toTop.addEventListener("click", () => scrollTo({ top: 0, behavior: "smooth" }));
+
+      // Mobile menu
+      const menu = $("#mobileMenu");
+      $("#burger").addEventListener("click", () => menu.classList.toggle("open"));
+      menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => menu.classList.remove("open")));
+
+      // Cursor glow (desktop)
+      const glow = $("#cursorGlow");
+      if (matchMedia("(pointer:fine)").matches) {
+        addEventListener("mousemove", (e) => { glow.style.left = e.clientX + "px"; glow.style.top = e.clientY + "px"; });
+      } else { glow.style.display = "none"; }
+
+      // Reveal + counters
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+      const cio = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          const el = e.target, target = +el.dataset.target;
+          let cur = 0; const dur = 1600, t0 = performance.now();
+          const tick = (t) => {
+            const p = Math.min((t - t0) / dur, 1);
+            const ease = 1 - Math.pow(1 - p, 3);
+            el.textContent = Math.floor(ease * target).toLocaleString("ar-EG");
+            if (p < 1) requestAnimationFrame(tick); else el.textContent = target.toLocaleString("ar-EG");
+          };
+          requestAnimationFrame(tick); cio.unobserve(el);
+        });
+      }, { threshold: 0.6 });
+      document.querySelectorAll(".num").forEach((el) => cio.observe(el));
+
+      // Active nav on scroll
+      const sections = DATA.nav.map((l) => $(l.href)).filter(Boolean);
+      const navAs = [...$("#navLinks").querySelectorAll("a")];
+      const sio = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            navAs.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + e.target.id));
+          }
+        });
+      }, { threshold: 0.5 });
+      sections.forEach((s) => sio.observe(s));
+
+      // Booking -> WhatsApp
+      $("#bookingForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const f = e.target;
+        const msg = "*طلب حجز موعد جديد*\n\n👤 اسم ولي الأمر: " + f.parentName.value +
+          "\n🧒 اسم الطفل: " + f.childName.value + "\n🎂 عمر الطفل: " + f.childAge.value +
+          "\n📞 رقم الهاتف: " + f.phone.value + "\n📝 سبب الزيارة: " + f.reason.value;
+        window.open(wa(msg), "_blank");
+      });
+    </script>
+  </body>
+</html>
